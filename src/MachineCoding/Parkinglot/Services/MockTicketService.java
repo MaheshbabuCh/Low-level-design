@@ -1,6 +1,5 @@
 package MachineCoding.Parkinglot.Services;
 
-import MachineCoding.Parkinglot.DTOs.TicketRequestDto;
 import MachineCoding.Parkinglot.DesignPatterns.Strategies.SpotAllocationStrategy;
 import MachineCoding.Parkinglot.Enums.VehicleType;
 import MachineCoding.Parkinglot.GateNotFoundException;
@@ -12,7 +11,7 @@ import MachineCoding.Parkinglot.Repositories.VehicleRepository;
 
 import java.util.Optional;
 
-public class TicketService {
+public class MockTicketService {
 
     GateRepository gateRepository;
     VehicleRepository vehicleRepository;
@@ -20,8 +19,8 @@ public class TicketService {
     SpotAllocationStrategy spotAllocationStrategy;
     TicketRepository ticketRepository;
 
-    public TicketService(GateRepository gateRepository, VehicleRepository vehicleRepository,
-                         ParkingLotRepository parkingLotRepository, SpotAllocationStrategy spotAllocationStrategy, TicketRepository ticketRepository) {
+    public MockTicketService(GateRepository gateRepository, VehicleRepository vehicleRepository,
+                             ParkingLotRepository parkingLotRepository, SpotAllocationStrategy spotAllocationStrategy, TicketRepository ticketRepository) {
         this.gateRepository = gateRepository;
         this.vehicleRepository = vehicleRepository;
         this.parkingLotRepository = parkingLotRepository;

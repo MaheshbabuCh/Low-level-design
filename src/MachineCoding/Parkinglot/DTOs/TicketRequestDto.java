@@ -1,12 +1,14 @@
 package MachineCoding.Parkinglot.DTOs;
 
+import MachineCoding.Parkinglot.Enums.VehicleType;
+
 public class TicketRequestDto {
 
     private String vehicleNumber;
 
-    private String vehicleType;
+    private VehicleType vehicleType;
 
-    private String gateId;
+    private Long gateId;
 
     public String getVehicleNumber() {
         return vehicleNumber;
@@ -16,19 +18,19 @@ public class TicketRequestDto {
         this.vehicleNumber = vehicleNumber;
     }
 
-    public String getVehicleType() {
+    public VehicleType getVehicleType() {
         return vehicleType;
     }
 
-    public void setVehicleType(String vehicleType) {
+    public void setVehicleType(VehicleType vehicleType) {
         this.vehicleType = vehicleType;
     }
 
-    public String getGateId() {
+    public Long getGateId() {
         return gateId;
     }
 
-    public void setGateId(String gateId) {
+    public void setGateId(Long gateId) {
         this.gateId = gateId;
     }
 }

@@ -55,4 +55,6 @@ public class BaseAuditAttributes {
     private Date modifiedAt;
 
 
+    public void setId(Long id) {
+    }
 }

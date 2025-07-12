@@ -5,13 +5,14 @@ import MachineCoding.Parkinglot.DTOs.TicketResponseDto;
 import MachineCoding.Parkinglot.Enums.VehicleType;
 import MachineCoding.Parkinglot.GateNotFoundException;
 import MachineCoding.Parkinglot.Models.Ticket;
+import MachineCoding.Parkinglot.Services.MockTicketService;
 import MachineCoding.Parkinglot.Services.TicketService;
 
-public class TicketController {
+public class MockTicketController {
 
-    TicketService ticketService;
+    MockTicketService ticketService;
 
-    public TicketController(TicketService ticketService) {
+    public MockTicketController(MockTicketService ticketService) {
         this.ticketService = ticketService;
     }
 

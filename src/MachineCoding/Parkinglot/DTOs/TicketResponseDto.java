@@ -1,5 +1,6 @@
 package MachineCoding.Parkinglot.DTOs;
 
+import MachineCoding.Parkinglot.Enums.VehicleType;
 import MachineCoding.Parkinglot.Models.Vehicle;
 
 import java.util.Date;
@@ -12,7 +13,7 @@ public class TicketResponseDto {
 
     private String vehicleNumber;
 
-    private String vehicleType;
+    private VehicleType vehicleType;
 
     private String operatorName;
 
@@ -42,11 +43,11 @@ public class TicketResponseDto {
         this.vehicleNumber = vehicleNumber;
     }
 
-    public String getVehicleType() {
+    public VehicleType getVehicleType() {
         return vehicleType;
     }
 
-    public void setVehicleType(String vehicleType) {
+    public void setVehicleType(VehicleType vehicleType) {
         this.vehicleType = vehicleType;
     }
 
