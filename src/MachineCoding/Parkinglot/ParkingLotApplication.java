@@ -3,6 +3,7 @@ package MachineCoding.Parkinglot;
 import MachineCoding.Parkinglot.Controllers.MockTicketController;
 import MachineCoding.Parkinglot.Controllers.TicketController;
 import MachineCoding.Parkinglot.DTOs.TicketRequestDto;
+import MachineCoding.Parkinglot.DTOs.TicketResponseDto;
 import MachineCoding.Parkinglot.DesignPatterns.Strategies.SpotAllocationStrategy;
 import MachineCoding.Parkinglot.Enums.VehicleType;
 import MachineCoding.Parkinglot.Repositories.GateRepository;
@@ -17,7 +18,7 @@ public class ParkingLotApplication {
 
         GateRepository gateRepository = new GateRepository();
         VehicleRepository vehicleRepository = new VehicleRepository();
-        ParkingLotRepository parkingLotRepository = new ParkingLotRepository();
+        ParkingLotRepository parkingLotRepository = new ParkingLotRepository(vehicleRepository, gateRepository);
         SpotAllocationStrategy spotAllocationStrategy = new SpotAllocationStrategy();
         TicketRepository ticketRepository = new TicketRepository();
 
@@ -46,9 +47,14 @@ public class ParkingLotApplication {
         ticketRequest.setVehicleType(VehicleType.BIKE);
         ticketRequest.setGateId(1L);
 
-        mockTicketController.createTicket(ticketRequest);
+        TicketResponseDto responseDto = mockTicketController.createTicket(ticketRequest);
 
-        
+        if (responseDto != null) {
+            System.out.println(responseDto.toString());
+        } else {
+            System.out.println("No ticket generated.");
+        }
+
         System.out.println("Application started successfully at port 8080");
     }
-}       
+}

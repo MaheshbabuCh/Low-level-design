@@ -4,6 +4,7 @@ import MachineCoding.Parkinglot.DesignPatterns.Strategies.SpotAllocationStrategy
 import MachineCoding.Parkinglot.Enums.VehicleType;
 import MachineCoding.Parkinglot.GateNotFoundException;
 import MachineCoding.Parkinglot.Models.*;
+import MachineCoding.Parkinglot.ParkingLotNotFoundException;
 import MachineCoding.Parkinglot.Repositories.GateRepository;
 import MachineCoding.Parkinglot.Repositories.ParkingLotRepository;
 import MachineCoding.Parkinglot.Repositories.TicketRepository;
@@ -57,10 +58,12 @@ public class MockTicketService {
 
         //4. get the parking lot from the gate
 
+       // parkingLotRepository.setVehicleRepository(vehicleRepository);
+
         Optional<ParkingLot> parkingLotOptional = parkingLotRepository.getParkingLotOfGate(gate);
 
         if(parkingLotOptional.isEmpty()){
-            throw new GateNotFoundException();
+            throw new ParkingLotNotFoundException("Parking lot not found");
         }
         ParkingLot parkingLot = parkingLotOptional.get();
 

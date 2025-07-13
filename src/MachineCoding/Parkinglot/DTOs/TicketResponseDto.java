@@ -66,4 +66,16 @@ public class TicketResponseDto {
     public void setEntryTime(Date entryTime) {
         this.entryTime = entryTime;
     }
+
+    @Override
+    public String toString() {
+        return "TicketResponseDto{" +
+                "spotNumber=" + spotNumber +
+                ", floorNumber=" + floorNumber +
+                ", vehicleNumber='" + vehicleNumber + '\'' +
+                ", vehicleType=" + vehicleType +
+                ", operatorName='" + operatorName + '\'' +
+                ", entryTime=" + entryTime +
+                '}';
+    }
 }
