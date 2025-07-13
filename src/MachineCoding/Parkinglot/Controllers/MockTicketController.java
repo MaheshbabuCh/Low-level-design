@@ -3,10 +3,9 @@ package MachineCoding.Parkinglot.Controllers;
 import MachineCoding.Parkinglot.DTOs.TicketRequestDto;
 import MachineCoding.Parkinglot.DTOs.TicketResponseDto;
 import MachineCoding.Parkinglot.Enums.VehicleType;
-import MachineCoding.Parkinglot.GateNotFoundException;
+import MachineCoding.Parkinglot.Exceptions.GateNotFoundException;
 import MachineCoding.Parkinglot.Models.Ticket;
 import MachineCoding.Parkinglot.Services.MockTicketService;
-import MachineCoding.Parkinglot.Services.TicketService;
 
 public class MockTicketController {
 
@@ -33,6 +32,7 @@ public class MockTicketController {
         response.setSpotNumber(ticket.getParkingSpot().getSpotNumber());
         response.setVehicleType(ticket.getVehicle().getVehicleType());
         response.setVehicleNumber(ticket.getVehicle().getVehicleNumber());
+        response.setFloorNumber(1);
 
         return response;
         // Logic to create a ticket

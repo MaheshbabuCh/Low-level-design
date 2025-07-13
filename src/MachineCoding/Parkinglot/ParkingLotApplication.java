@@ -6,6 +6,7 @@ import MachineCoding.Parkinglot.DTOs.TicketRequestDto;
 import MachineCoding.Parkinglot.DTOs.TicketResponseDto;
 import MachineCoding.Parkinglot.DesignPatterns.Strategies.SpotAllocationStrategy;
 import MachineCoding.Parkinglot.Enums.VehicleType;
+import MachineCoding.Parkinglot.Exceptions.GateNotFoundException;
 import MachineCoding.Parkinglot.Repositories.GateRepository;
 import MachineCoding.Parkinglot.Repositories.ParkingLotRepository;
 import MachineCoding.Parkinglot.Repositories.TicketRepository;
@@ -49,12 +50,14 @@ public class ParkingLotApplication {
 
         TicketResponseDto responseDto = mockTicketController.createTicket(ticketRequest);
 
+        System.out.println("Application started successfully at port 8080 \n");
+
         if (responseDto != null) {
-            System.out.println(responseDto.toString());
+            System.out.println(responseDto);
         } else {
             System.out.println("No ticket generated.");
         }
 
-        System.out.println("Application started successfully at port 8080");
+
     }
 }

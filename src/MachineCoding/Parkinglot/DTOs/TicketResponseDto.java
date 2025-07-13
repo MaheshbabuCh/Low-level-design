@@ -69,13 +69,13 @@ public class TicketResponseDto {
 
     @Override
     public String toString() {
-        return "TicketResponseDto{" +
-                "spotNumber=" + spotNumber +
-                ", floorNumber=" + floorNumber +
-                ", vehicleNumber='" + vehicleNumber + '\'' +
-                ", vehicleType=" + vehicleType +
-                ", operatorName='" + operatorName + '\'' +
-                ", entryTime=" + entryTime +
-                '}';
+        return "Please find the ticket details here : \n" +
+                "  spotNumber=" + spotNumber + "\n" +
+                "  floorNumber=" + floorNumber + "\n" +
+                "  vehicleNumber='" + vehicleNumber + '\'' + "\n" +
+                "  vehicleType=" + vehicleType + "\n" +
+                "  operatorName='" + operatorName + '\'' + "\n" +
+                "  entryTime=" + entryTime + "\n" +
+                "\nThank you for using our service!";
     }
 }

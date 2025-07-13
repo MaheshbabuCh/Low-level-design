@@ -2,9 +2,9 @@ package MachineCoding.Parkinglot.Services;
 
 import MachineCoding.Parkinglot.DesignPatterns.Strategies.SpotAllocationStrategy;
 import MachineCoding.Parkinglot.Enums.VehicleType;
-import MachineCoding.Parkinglot.GateNotFoundException;
+import MachineCoding.Parkinglot.Exceptions.GateNotFoundException;
 import MachineCoding.Parkinglot.Models.*;
-import MachineCoding.Parkinglot.ParkingLotNotFoundException;
+import MachineCoding.Parkinglot.Exceptions.ParkingLotNotFoundException;
 import MachineCoding.Parkinglot.Repositories.GateRepository;
 import MachineCoding.Parkinglot.Repositories.ParkingLotRepository;
 import MachineCoding.Parkinglot.Repositories.TicketRepository;
